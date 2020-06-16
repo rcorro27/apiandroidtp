@@ -33,7 +33,7 @@ public class RecetteControleur extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/json;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             out.print(JsonManager.Stringify(RecetteManager.getAll()));
         }
