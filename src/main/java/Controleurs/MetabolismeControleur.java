@@ -19,7 +19,7 @@ import managers.JsonManager;
  *
  * @author rcorroch
  */
-@WebServlet(name = "MetabolismeControleur", urlPatterns = {"/metabolismeControleur"})
+@WebServlet(name = "MetabolismeControleur", urlPatterns = {"/metabolismecontroleur"})
 public class MetabolismeControleur extends HttpServlet {
 
     /**
@@ -33,7 +33,7 @@ public class MetabolismeControleur extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/json;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
            out.print(JsonManager.Stringify(MetabolismeManager.getAll()));
         }
