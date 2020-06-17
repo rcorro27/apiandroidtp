@@ -10,5 +10,42 @@ package Entites;
  * @author rcorroch
  */
 public class Metabolisme {
+    String titre;
+    String categorie;
+    String message;
+
+    public Metabolisme() {
+    }
+
+    public Metabolisme(String titre, String categorie, String message) {
+        this.titre = titre;
+        this.categorie = categorie;
+        this.message = message;
+    }
+
+    public String getTitre() {
+        return titre;
+    }
+
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
     
+ 
 }
