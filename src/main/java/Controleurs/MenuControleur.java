@@ -19,7 +19,7 @@ import managers.JsonManager;
  *
  * @author rcorroch
  */
-@WebServlet(name = "MenuControleur", urlPatterns = {"/MenuControleur"})
+@WebServlet(name = "MenuControleur", urlPatterns = {"/menucontroleur"})
 public class MenuControleur extends HttpServlet {
 
     /**
@@ -33,7 +33,7 @@ public class MenuControleur extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/json;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
            out.print(JsonManager.Stringify(MenuManager.getAll()));
