@@ -12,7 +12,7 @@ package Entites;
 public class MenuNutritionel {
 
     int categorie;
-    String pourentage;
+    String pourcentage;
     String petitDejeuner;
     String collationMatin;
     String dejeuner;
