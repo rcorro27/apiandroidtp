@@ -24,7 +24,7 @@ public class MenuNutritionel {
 
     public MenuNutritionel(int categorie, String pourentage, String petitDejeuner, String collationMatin, String dejeuner, String collationApresMidi, String diner) {
         this.categorie = categorie;
-        this.pourentage = pourentage;
+        this.pourcentage = pourentage;
         this.petitDejeuner = petitDejeuner;
         this.collationMatin = collationMatin;
         this.dejeuner = dejeuner;
@@ -41,11 +41,11 @@ public class MenuNutritionel {
     }
 
     public String getPourentage() {
-        return pourentage;
+        return pourcentage;
     }
 
     public void setPourentage(String pourentage) {
-        this.pourentage = pourentage;
+        this.pourcentage = pourentage;
     }
 
     public String getPetitDejeuner() {
