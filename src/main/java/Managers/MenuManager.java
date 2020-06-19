@@ -6,6 +6,7 @@
 package Managers;
 
 import Entites.MenuNutritionel;
+import Entites.Metabolisme;
 import java.util.ArrayList;
 
 /**
@@ -26,5 +27,14 @@ public class MenuManager {
 
     public static ArrayList<MenuNutritionel> getAll() {
         return menus;
+    }
+    public static ArrayList<MenuNutritionel> getByIdCategorie(int idCategorie) {
+        ArrayList<MenuNutritionel> retour = new ArrayList<>();
+        for (MenuNutritionel m : menus) {
+            if (m.getCategorie() == idCategorie) {
+                retour.add(m);
+            }
+        }
+        return retour;
     }
 }

@@ -36,7 +36,12 @@ public class MenuControleur extends HttpServlet {
         response.setContentType("text/json;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-           out.print(JsonManager.Stringify(MenuManager.getAll()));
+             if (request.getParameter("idCategorie") != null) {
+                out.print(JsonManager.Stringify(MenuManager.getByIdCategorie(Integer.parseInt(request.getParameter("idCategorie")))));
+            } else {
+                out.print(JsonManager.Stringify(MenuManager.getAll()));
+            }
+          
         }
     }
 
