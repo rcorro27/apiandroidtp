@@ -10,6 +10,8 @@ package Entites;
  * @author rcorroch
  */
 public class Metabolisme {
+
+    int idCategorie;
     String titre;
     String categorie;
     String message;
@@ -18,6 +20,13 @@ public class Metabolisme {
     }
 
     public Metabolisme(String titre, String categorie, String message) {
+        this.titre = titre;
+        this.categorie = categorie;
+        this.message = message;
+    }
+
+    public Metabolisme(int idCategorie, String titre, String categorie, String message) {
+        this.idCategorie = idCategorie;
         this.titre = titre;
         this.categorie = categorie;
         this.message = message;
@@ -46,6 +55,13 @@ public class Metabolisme {
     public void setMessage(String message) {
         this.message = message;
     }
-    
- 
+
+    public int getIdCategorie() {
+        return idCategorie;
+    }
+
+    public void setIdCategorie(int idCategorie) {
+        this.idCategorie = idCategorie;
+    }
+
 }

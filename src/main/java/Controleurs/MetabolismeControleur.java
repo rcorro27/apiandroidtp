@@ -35,7 +35,11 @@ public class MetabolismeControleur extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/json;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-           out.print(JsonManager.Stringify(MetabolismeManager.getAll()));
+            if (request.getParameter("idCategorie") != null) {
+                out.print(JsonManager.Stringify(MetabolismeManager.getByIdCategorie(Integer.parseInt(request.getParameter("idCategorie")))));
+            } else {
+                out.print(JsonManager.Stringify(MetabolismeManager.getAll()));
+            }
         }
     }
 
